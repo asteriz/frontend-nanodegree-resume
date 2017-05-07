@@ -104,6 +104,10 @@ a {
   display: none;
 }
 
+#online-h3 {
+  color: #999;
+}
+
 .orange {
   background-color: #f5ae23;
 }
@@ -127,9 +131,13 @@ a {
   background-color: #4a4a4a;
 }
 
+.gold {
+  color: #ffd700;
+}
+
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #4a4a4a;
 }
 
 .flex-box {

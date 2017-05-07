@@ -13,10 +13,18 @@ var bio = {
     "display": function() {
         $('#header').prepend(HTMLheaderRole.replace("%data%", bio.role));
         $('#header').prepend(HTMLheaderName.replace("%data%", bio.name));
-        $('#topContacts').append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-        $('#topContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
-        $('#topContacts').append(HTMLgithub.replace("%data%", bio.contacts.github));
-        $('#topContacts').append(HTMLlocation.replace("%data%", bio.contacts.location));
+        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+        var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        $('#topContacts').append(formattedMobile);
+        $('#topContacts').append(formattedEmail);
+        $('#topContacts').append(formattedGithub);
+        $('#topContacts').append(formattedLocation);
+        $('#footerContacts').append(formattedMobile);
+        $('#footerContacts').append(formattedEmail);
+        $('#footerContacts').append(formattedGithub);
+        $('#footerContacts').append(formattedLocation);
         $('#header').append(HTMLbioPic.replace("%data%", bio.biopic));
         $('#header').append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
         $('#header').append(HTMLskillsStart);
